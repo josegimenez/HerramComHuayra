@@ -21,7 +21,7 @@
 #    Se agregan permisos de ejecución: sudo chmod 755 /usr/bin/logo_huayra_mate
 #    Se habilita el uso en el inicio de la terminal: echo "logo_huayra_mate" >> ~/.bashrc
 
-# Edición en GitHub: https://github.com/ComHuayra/HerramComHuayra/logo_huayra_mate
+# Edición en GitHub: https://github.com/ComHuayra/HerramComHuayra/blob/master/logo_huayra_mate
 # Debate en Foros: http://foros.comunidadhuayra.org/index.php/topic,1390.msg3491.html#msg3491
 
 # Publicado inicialmente en Foros Comunidad Huayra en:
