@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# logo_huayra_mate: Logo de Huayra (con caracteres en terminal) mostrando versión de kernel y mate.
+# logo_huayra_mate: Logo de Huayra (con caracteres en terminal)
+#                   mostrando versión actual de Kernel, Mate, Debian y Huayra.
 # Autor Inicial:  Julio A. GÓMEZ, Venado Tuerto, Santa Fe, Argentina
 #                    Idea y código inicial, con gráfica,
 #                    versión de kernel actual (truncada) y versión mate preconfigurada.
