@@ -1,2 +1,2 @@
 # HerramComHuayra
-Herramientas básicas aportadas por Activistas de Comunidad Huayra
+Herramientas básicas aportadas/gestionadas por Activistas/Colaboradores de/en Comunidad Huayra
