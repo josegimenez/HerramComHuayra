@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# screenfetch_comhuayra: Script para instalar automaticamente ScreenFetch en Huayra GNU/Linux.
+# Autor: Julio A. GÓMEZ, Melincué, Santa Fe, Argentina.
+
+# Contacto a: gomez-ja@hotmail.com.ar
+
+# Comentarios:
+#             Se espera que funcione correctamente, en Huayra GNU/Linux, con entorno Mate activo.
+#             Se probó en version: 2.2 (32bits).
+
+# Uso: 
+#     1) Otorgar permisos de ejecución al archivo "screenfetch_huayra". (botón derecho sobre el archivo, selecionamos->"propiedades", en la pestaña ->"permisos", seleccionar la opción ->"ejecución: Permitir ejecutar el archivo como un programa".
+#     2) Abrir con doble click y seleccionar ->"ejecutar en un terminal" y se instalará automáticamente.
+#     3) Para usar, se abre una terminal y se usa el comando: screenfetch
+
+# Edición en GitHub: https://github.com/JulioAGomez/vientosencillo/blob/master/screenfetch_huayra
+
+# Debate en Foros comunidad Huayra: http://foros.comunidadhuayra.org/index.php/topic,1424.0.html
+
+# Licencia: General Public License Version 3 (GPL v3) (en inglés, válida legalmente)
+#           http://www.gnu.org/licenses/gpl.txt
+#           Licencia Pública General de GNU Versión 3 (en Español)
+#           (Traducciones NO oficiales, para facilitar interpretación)
+#           http://gugs.sindominio.net/licencias/
+
+echo instalador de screenfetch
+echo ...dentro 5 seg se inicia el script, para cancelar cierre la terminal.
+sleep 5s
+
+cd /usr/bin 
+
+sudo wget -c https://raw.github.com/KittyKatt/screenFetch/master/screenfetch-dev -O screenfetch
+
+sudo chmod +x screenfetch
+
+echo Listo :D. Cerrando en 5 seg.
+sleep 5s
+exit
