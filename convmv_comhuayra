@@ -1,0 +1,65 @@
+#!/bin/bash
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=
+
+
+# Descripción.
+# -----------
+
+#   El Script convmv_comhuayra sirve para cambiar la codificación de caracteres de los nombres de archivos utilizando la herramienta Convmv, es decir, para renombrar múltiples archivos o carpetas (renombrar archivos con caracteres raros en el nombre). 
+#   En algunas ocasiones cuando usamos ficheros que se han creado en entorno windows, y estos incluyen en el nombre algún acento, alguna letra Ñ o algún carácter especial, aparecen símbolos como "�", "(codificación no valida)". Sobre todo al descomprimir archivos .rar o .zip
+#   Esto solo pasa con archivos que se han creado y/o comprimido en entornos Windows y el problema no proviene de un fallo de incompatibilidad o configuración de Debian GNU/Linux. Todo lo contrario, procede de una incompatibilidad entre el sistema Windows donde el fichero fue creado y/o comprimido y el resto de sistemas operativos existentes.
+
+
+# Significado de los parámetros del comando.
+# -----------------------------------------
+
+#   -r Especifica que el comando corregirá los nombres de archivo de modo recursivo, es decir, los nombres de archivo de los archivos de la carpeta actual y los de todas las carpetas que están incluidas en ésta.
+#   -f Especifica la codificación de caracteres que tienen los archivos que se quieren convertir.
+#   cp850 Codificación de caracteres por defecto de Windows, pues seguramente el archivo comprimido se creó en Windows. (ver)
+#   -t Especifica la codificación de caracteres a la que se quiere convertir los nombres de archivo.
+#   UTF-8 Codificación de caracteres por defecto en Debian.
+#   --notest Especifica que no es una prueba. Si no se incluye, el comando sólo muestra cómo quedarían los nombres de archivo, pero no realiza ningún cambio.
+
+
+# Uso.
+# ---
+
+#   1) Convmv no viene instalado por defecto en Huayra GNU/Linux, para instalarlo, ejecutar en la terminal el siguiente comando: sudo apt-get install convmv
+#   2) Otorgar permisos de ejecución al archivo "convmv_comhuayra". (botón derecho sobre el archivo, selecionar ->"propiedades", en la pestaña ->"permisos", seleccionar la opción ->"ejecución: Permitir ejecutar el archivo como un programa").
+#   3) Situar el Script en el directorio donde se encuentra el archivo a modificar, abrir con doble click y seleccionar ->"ejecutar en un terminal" y automáticamente se modificarán los archivos correspondientes.
+
+
+# Edición en GitHub. 
+# -----------------
+#   https://github.com/JulioAGomez/vientosencillo/blob/master/convmv_comhuayra
+
+# Debate en Foros Comunidad Huayra.
+# --------------------------------
+#   http://foros.comunidadhuayra.org/index.php/topic,1426.0.html
+  
+# Autor.
+# -----
+#   Julio A. Gómez, Melincué, Santa Fe, Argentina.
+
+# Contacto a. 
+# ----------
+#   gomez-ja@hotmail.com.ar
+
+# Licencia.
+# --------
+#   General Public License Version 3 (GPL v3) (en inglés, válida legalmente)
+#   http://www.gnu.org/licenses/gpl.txt
+#   Licencia Pública General de GNU Versión 3 (en Español)
+#   (Traducciones NO oficiales, para facilitar interpretación)
+#   http://gugs.sindominio.net/licencias/
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=
+
+echo iniciando Script convmv_comhuayra
+echo ...dentro 5 seg se inicia el script, para cancelar, cierre la terminal.
+sleep 5s
+
+find . -name '?' | xargs convmv -r --notest -f cp850 -t UTF-8
+
+echo Listo :D. Cerrando en 5 seg.
+sleep 5s
+exit
