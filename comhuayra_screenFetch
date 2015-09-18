@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-==========================================================================
+# ==========================================================================
 # screenFetch modificado para Huayra GNU/Linux.
 # foro de debate: http://foros.comunidadhuayra.org/index.php?topic=1382.0
 # créditos:  @carlos macheratti y Pablo Zambrano.
-==========================================================================
+# ==========================================================================
 # screenFetch - a CLI Bash script to show system/theme info in screenshots
 
 # Copyright (c) 2010-2014 Brett Bohnenkamper <kittykatt@kittykatt.us>
