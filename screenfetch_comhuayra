@@ -30,7 +30,7 @@ sleep 5s
 
 cd /usr/bin 
 
-sudo wget -c https://raw.github.com/KittyKatt/screenFetch/master/screenfetch-dev -O screenfetch
+sudo wget -c https://raw.githubusercontent.com/ComHuayra/HerramComHuayra/master/comhuayra_screenFetch -O screenfetch
 
 sudo chmod +x screenfetch
 
