@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# logo_huayra_mate: Logo de Huayra (con caracteres en terminal)
+#                   mostrando versión actual de Kernel, Mate, Debian y Huayra.
+# Autor Inicial:  Julio A. GÓMEZ, Venado Tuerto, Santa Fe, Argentina
+#                    Idea y código inicial, con gráfica,
+#                    versión de kernel actual (truncada) y versión mate preconfigurada.
+# Aporte Inicial: Ricardo M. MORALES, Rivadavia, San Juan, Argentina
+#                    Ajuste versión completa kernel, mínimo ajuste "patita Y",
+#                    versión actual (real) mate y texto formal+licencia,
+#                    agregado versión actual Huayra y Debian, subida en GitHub.
+# Aporte Inicial: Jose Gimenez. San Carlos de Bariloche, Rio Negro, Argentina
+#                    "h" en minuscula, reconfiguracion de la info,
+#                    identificación del usuario e institucion
+# Contactos a:    activistas@comunidadhuayra.org
+
+# Actualizado: Dom 21/06/15 11:50
+
+# Comentarios:
+#    Se espera que funcione correctamente, en Huayra GNU/Linux, con entorno Mate activo.
+
+# Uso:
+#    Se renombra el archvo a logo_huayra_mate
+#    Se copia el archivo en /usr/bin: sudo cp logo_huayra_mate /usr/bin
+#    Se agregan permisos de ejecución: sudo chmod 755 /usr/bin/logo_huayra_mate
+#    Se habilita el uso en el inicio de la terminal: echo "logo_huayra_mate" >> ~/.bashrc
+
+# Edición en GitHub: https://github.com/ComHuayra/HerramComHuayra/blob/master/logo_huayra_mate
+# Debate en Foros: http://foros.comunidadhuayra.org/index.php/topic,1390.msg3491.html#msg3491
+
+# Publicado inicialmente en Foros Comunidad Huayra en:
+#    http://foros.comunidadhuayra.org/index.php/topic,1389.msg3489.html#msg3489
+
+# Basado en conceptos e ideas de referencia en:
+#    https://biolinux.wordpress.com/2013/09/26/personaliza-prompt/
+
+# Licencia: General Public License Version 3 (GPL v3) (en inglés, válida legalmente)
+#           http://www.gnu.org/licenses/gpl.txt
+#           Licencia Pública General de GNU Versión 3 (en Español)
+#           (Traducciones NO oficiales, para facilitar interpretación)
+#           http://gugs.sindominio.net/licencias/
+
+if [[ $1 == "" ]]; then
+    printf """
+              _   
+             | | Kernel Linux %s %s 
+             | |_ _ _   _  __ _ _   _ _ _  __ _ 
+             |  _  | | | |/ _' | | | | '_|/ _' | Debian v %s
+             | | | | |_| | (_| | |_| | | | (_| |
+             |_| |_|\___/ \__,_|\__, |_|  \__,_| MATE %s
+                                 _/ /           
+             Nombre y Apellido  |__/ Escuela o Institucion
+
+""" "`uname -r |cut -c1-`" "`cat /etc/huayra_version`" "`cat /etc/debian_version`" "`mate-about -v|cut -c26-`"
+fi
